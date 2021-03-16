@@ -1,0 +1,17 @@
+﻿@using 影片練習1.Models
+@model CurrentUser 
+@* 因為 影片練習1 的命名空間已經有了,才可以使用上面的model CurrentUser *@
+@{
+    ViewBag.Title = "Index";
+    CurrentUser userData = (CurrentUser) ViewData["CurrentUserViewData"];
+}
+
+<h2>Index First</h2>
+<h3>ViewBag.Title :@ViewBag.Title</h3>
+<h3>ViewBag.TestProp : @ViewBag.TestProp</h3>
+<h3>ViewBag.CurrentUserViewDataViewBag : @ViewBag.CurrentUserViewDataViewBag.Name</h3>
+<h3>TempData :@TempData["TestProp"]</h3>
+
+<h3> ViewData["TestProp"] : @ViewData["TestProp"] </h3>
+<h3>ViewData["CurrentUserViewData"]:@userData.Name</h3>
+<h3>@Model.Name</h3>
